@@ -1,17 +1,17 @@
 <div class="container" *ngIf="weatherDataInput">
   <div class="upper-data">
     <img
-      src="../../../../../assets/sun.jpg"
+      src="../../../../../assets/sun.png"
       *ngIf="weatherDataInput.main.temp > 15"
     />
     <img
-      src="../../../../../assets/cold1.jpg"
+      src="../../../../../assets/snow.jpg"
       *ngIf="weatherDataInput.main.temp <= 15"
     />
 
     <div class="weather-data">
       <div class="location">{{ weatherDataInput.name }}</div>
-      <div class="temperature">{{ weatherDataInput.main.temp | number: "1.0-0" }}°C </div>
+      <div class="temperature">{{ weatherDataInput.main.temp | number : "1.0-0" }}°C </div>
     </div>
   </div>
 
@@ -24,7 +24,7 @@
           <span>Mínima</span>
         </div>
         <div class="info-block-value">
-          {{ weatherDataInput.main.temp_min }}
+          {{ weatherDataInput.main.temp_min | number : "1.0-0" }}°C
         </div>
       </div>
 
