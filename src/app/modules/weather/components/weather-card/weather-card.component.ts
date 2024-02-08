@@ -7,14 +7,10 @@ import { WeatherData } from 'src/app/models/interfaces/weather.interface';
   templateUrl: './weather-card.component.html',
   styleUrls: []
 })
-export class WeatherCardComponent implements OnInit {
+export class WeatherCardComponent {
   @Input() weatherDataInput!: WeatherData;
   minTemperatureIcon = faTemperatureLow;
   maxTemperatureIcon = faTemperatureHigh;
   humidityIcon = faDroplet;
   windIcon = faWind;
-
-  ngOnInit(): void {
-    console.log('Dados recebidos do componente pai:', this.weatherDataInput);
-  }
 }
